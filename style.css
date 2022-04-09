@@ -232,7 +232,7 @@ img {
   margin-right: 0.25rem;
 }
 
-.home__button-mobile {
+.home__button-cv {
   display: inline-block;
   border: 2px solid var(--text-color);
   color: var(--title-color);
@@ -242,7 +242,7 @@ img {
   font-weight: var(--font-medium);
   margin-top: var(--mb-3);
 }
-.home__button-mobile:hover {
+.home__button-cv:hover {
   background-color: var(--text-color);
   color: var(--container-color);
 }
@@ -447,5 +447,19 @@ img {
 
   .home__container {
     gap: 1.5rem;
+  }
+
+  .home__button-cv {
+    display: none;
+  }
+
+  .lang__content {
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 3.5rem;
+  }
+
+  .interests__container {
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 3.5rem;
   }
 }
