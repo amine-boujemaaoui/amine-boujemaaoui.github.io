@@ -2,28 +2,309 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>test</title>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- title -->
+    <title>Amine Boujemaaoui</title>
 </head>
 
 <body>
-  <div class="scene">
-    <div class="floor"></div>
-    <div class="cube">
-      <div class="front"></div>
-      <div class="back"></div>
-      <div class="left"></div>
-      <div class="right"></div>
-      <div class="top">
-        <div class="ballShadow"></div>
-      </div>
-      <div class="bottom"></div>
-    </div>
-    <div class="ball"></div>
-  </div>
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">Amine</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list ">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home nav__icon'></i>Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#profile" class="nav__link">
+                            <i class='bx bx-user nav__icon'></i>Profile
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#formation" class="nav__link">
+                            <i class='bx bxs-school nav__icon'></i></i>Formation
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-receipt nav__icon'></i>Competances
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class='bx bx-code-alt nav__icon'></i>Projets
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-envelope nav__icon'></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main bd-container">
+        <div class="cv">
+            <div class="cv__left">
+                <!-- ========== HOME ========== -->
+                <section class="home" id="home">
+                    <div class="home__container section bd-grid">
+                        <div class="home__data bd-grid">
+                            <img src="amine.png" alt="" class="home__img">
+
+                            <h1 class="home__title">AMINE <b>BOUJEMAAOUI</b></h1>
+                            <h3 class="home__status">Etudiant en DUT Informatique</h3>
+
+                            <!-- dl cv -->
+                            <div>
+                                <a download="" href="cv.pdf" class="home__button-mobile">Télécharger</a>
+                            </div>
+                        </div>
+
+                        <div class="home__address bd-grid">
+                            <span class="home__info">
+                                <i class='bx bx-map home__icon'></i> 8 Rue de Vienne, 93000 Bobigny
+                            </span>
+                            <span class="home__info">
+                                <i class='bx bx-envelope home__icon'></i> amine.boujemaaoui.1@gmail.com
+                            </span>
+                            <span class="home__info">
+                                <i class='bx bx-phone home__icon'></i> +33 7 69 80 90 38
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- theme btn -->
+
+                <!-- ========= SOCIAL ========= -->
+                <section class="social section">
+                    <h2 class="section-title">Social</h2>
+
+                    <div class="social__container bd-grid">
+                        <a href="https://www.linkedin.com/in/amine-boujemaaoui/" target="_blank" class="social__link">
+                            <i class='bx bxl-linkedin-square social__icon'></i> @amine-boujemaaoui
+                        </a>
+                        <a href="https://github.com/amine-boujemaaoui" target="_blank" class="social__link">
+                            <i class='bx bxl-github social__icon'></i></i> @amine-boujemaaoui
+                        </a>
+                    </div>
+                </section>
+
+                <!-- ======== PROFILE ========= -->
+                <section class="profile section" id="profile">
+                    <h2 class="section-title">Profile</h2>
+
+                    <p class="profile__desc">
+                        Je suis une personne passionnée,
+                        persévérante et impliqué. Je maitrise
+                        différents langages informatiques.
+                        Autonome mais capable de travail en
+                        équipe. Je souhaite me perfectionner
+                        pour pouvoir intégrer une école
+                        d’ingénieurs
+                    </p>
+                </section>
+
+                <!-- ======== FORMATION ======= -->
+                <section class="formation section" id="formation">
+                    <h2 class="section-title">Formation</h2>
+
+                    <div class="formation__container bd-grid">
+                        <div class="formation__content">
+                            <div class="formation__time">
+                                <span class="formation__circle"></span>
+                                <span class="formation__line"></span>
+                            </div>
+
+                            <div class="formation__data bd-grid">
+                                <h3 class="formation__title">BAC STI2D - SIN</h3>
+                                <span class="formation__etudes">Lycée Polyvalent Lucie Aubrac</span>
+                                <span class="formation__year">2018 - 2019</span>
+                            </div>
+                        </div>
+
+                        <div class="formation__content">
+                            <div class="formation__time">
+                                <span class="formation__circle"></span>
+                                <span class="formation__line"></span>
+                            </div>
+
+                            <div class="formation__data bd-grid">
+                                <h3 class="formation__title">DUT Informatique</h3>
+                                <span class="formation__etudes">Université Sorbonne Paris Nord</span>
+                                <span class="formation__year">2020 - 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======= COMPETANCES ====== -->
+                <section class="skills section" id="skills">
+                    <h2 class="section-title">Competances</h2>
+
+                    <div class="skills__content bd-grid">
+                        <ul class="skills__data">
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>HTML
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>CSS
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>PHP
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>JavaScript
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>PostgreSQL
+                            </li>
+                        </ul>
+
+                        <ul class="skills__data">
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>MySQL
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>Python
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>Java
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>Scala
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>C
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="cv__right">
+                <!-- ======== PROJETS ========= -->
+                <section class="projects section" id="projects">
+                    <h2 class="section-title">Projets</h2>
+
+                    <div class="projects__container bd-grid">
+                        <div class="projects__content">
+                            <div class="projetcs__time">
+                                <span class="projects__circle"></span>
+                                <span class="projects__line"></span>
+                            </div>
+
+                            <div class="projects__data bd-grid">
+                                <h3 class="projects__title">Casper</h3>
+                                <span class="projects__type">De oct. 2021 à jan. 2022 | Projet site web</span>
+                                <p class="projects__desc">
+                                    Projet en groupe de 5 personnes.
+                                    J'ai réalisé la page d'accueil, les fonctionnalités de connexion
+                                    et création de compte.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projects__content">
+                            <div class="projetcs__time">
+                                <span class="projects__circle"></span>
+                                <span class="projects__line"></span>
+                            </div>
+
+                            <div class="projects__data bd-grid">
+                                <h3 class="projects__title">Jouer Encore et Toujours</h3>
+                                <span class="projects__type">De mars 2020 à avr. 2022 | Projet site web</span>
+                                <p class="projects__desc">
+                                    Projet en trinôme.
+                                    J'ai réalisé le catalogue du site, la page d'article et la page
+                                    d'accueil.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projects__content">
+                            <div class="projetcs__time">
+                                <span class="projects__circle"></span>
+                                <span class="projects__line"></span>
+                            </div>
+
+                            <div class="projects__data bd-grid">
+                                <h3 class="projects__title">Jeux d'échecs</h3>
+                                <span class="projects__type">De dec. 2021 à fev. 2022 | Projet python</span>
+                                <p class="projects__desc">
+                                    Projet en binôme.
+                                    J'ai réalisé l'affichage de l’échiquier dans le terminal et
+                                    programmé les mouvements de la tour, du fou et du pion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========= LANGUES ======== -->
+                <section class="lang section">
+                    <h2 class="section-title">Langues</h2>
+
+                    <div class="lang__container">
+                        <ul class="lang__content bd-grid">
+                            <li class="lang__name">
+                                <span class="lang__circle"></span> Français
+                            </li>
+                            <li class="lang__name">
+                                <span class="lang__circle"></span> Anglais
+                            </li>
+                            <li class="lang__name">
+                                <span class="lang__circle"></span> Japonais
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ========= name ======== -->
+                <section class="interests section">
+                    <h2 class="section-title">Centre d'intérêts</h2>
+
+                    <div class="interests__container bd-grid">
+                        <div class="interests__content">
+                            <i class='bx bxs-book interests__icon'></i>
+                            <span class="interests__name">Lectures</span>
+                        </div>
+                        <div class="interests__content">
+                            <i class='bx bxs-car-mechanic interests__icon'></i>
+                            <span class="interests__name">JDM</span>
+                        </div>
+                        <div class="interests__content">
+                            <i class='bx bx-car interests__icon'></i>
+                            <span class="interests__name">Formula D.</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+    </a>
+
+    <script src=""></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
