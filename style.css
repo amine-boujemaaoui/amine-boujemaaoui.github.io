@@ -409,7 +409,7 @@ img {
 }
 
 /* adaptation pour les grands ecrans */
-@media screen and (max-width: 968px) {
+@media screen and (min-width: 968px) {
   body {
     margin: 3rem 0;
   }
