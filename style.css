@@ -40,6 +40,30 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ========== dark theme ========== */
+body.dark-theme {
+  --title-color: #f2f2f2;
+  --text-color: #bfbfbf;
+  --container-color: #212121;
+  --container-color-alt: #181616;
+  --body-color: #2b2b2b;
+}
+
+.change-theme {
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  display: flex;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  color: var(--title-color);
+}
+/* ========== base ========== */
+
 body {
   margin: 0 0 var(--header-height) 0;
   padding: 0;
@@ -459,7 +483,7 @@ img {
   }
 
   .interests__container {
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(3, max-content);
     column-gap: 3.5rem;
   }
 }
