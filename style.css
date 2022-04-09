@@ -439,4 +439,13 @@ img {
   .cv__right {
     padding: 0 1.5rem;
   }
+
+  .section-title,
+  .profile__desc {
+    text-align: initial;
+  }
+
+  .home__container {
+    gap: 1.5rem;
+  }
 }
