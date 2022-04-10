@@ -88,6 +88,11 @@ body.scale-cv {
 
 .scale-cv .change-theme,
 .scale-cv .generate-pdf {
+  display: none;
+}
+
+.scale-cv .bd-container {
+  max-width: 595px;
 }
 
 /* ========== base ========== */
