@@ -111,9 +111,17 @@ function unScaleCV() {
 // gerenre le pdf
 let areaCV = document.getElementById("cv-area");
 let buttonCV = document.getElementById("cv-button");
+// option html2pdf
+let opt = {
+  margin: 0,
+  filename: "CV_Amine_BOUJEMAAOUI.pdf",
+  image: { type: "jpeg", quality: 0.98 },
+  html2canvas: { scale: 4 },
+  jsPDF: { format: "a4", orientation: "portrait" },
+};
 // fonction qui appele html2pdf
 function generatePDF() {
-  html2pdf(areaCV);
+  html2pdf(areaCV, opt);
 }
 // eventlistener sur le bouton
 buttonCV.addEventListener("click", () => {
