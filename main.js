@@ -98,3 +98,20 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+/* ---------------- GENERER LE PDF ------------------------*/
+// mettre le CV au format A4
+function scaleCV() {
+  document.body.classList.add("scale-cv");
+}
+// retier les changement apres le telechargement
+function unScaleCV() {
+  document.body.classList.remove("scale-cv");
+}
+// gerenre le pdf
+let cvButton = document.getElementById("cv-button");
+// eventlistener sur le bouton
+cvButton.addEventListener("click", () => {
+  // 1. ajout de la class .scale-cv
+  scaleCV();
+});
