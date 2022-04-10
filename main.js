@@ -109,9 +109,16 @@ function unScaleCV() {
   document.body.classList.remove("scale-cv");
 }
 // gerenre le pdf
-let cvButton = document.getElementById("cv-button");
+let areaCV = document.getElementById("cv-area");
+let buttonCV = document.getElementById("cv-button");
+// fonction qui appele html2pdf
+function generatePDF() {
+  html2pdf(areaCV);
+}
 // eventlistener sur le bouton
-cvButton.addEventListener("click", () => {
+buttonCV.addEventListener("click", () => {
   // 1. ajout de la class .scale-cv
   scaleCV();
+  // 2. on genere le pdf
+  generatePDF();
 });
