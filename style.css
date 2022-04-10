@@ -73,7 +73,7 @@ body.scale-cv {
 }
 
 /* ============ generer le pdf ============ */
-.generate-pdf {
+#cv-button {
   display: none;
   position: absolute;
   top: 2.2rem;
@@ -82,12 +82,12 @@ body.scale-cv {
   color: var(--text-color);
   cursor: pointer;
 }
-.generate-pdf:hover {
+#cv-button:hover {
   color: var(--title-color);
 }
 
 .scale-cv .change-theme,
-.scale-cv .generate-pdf {
+.scale-cv #cv-button {
   display: none;
 }
 
@@ -505,7 +505,7 @@ img {
     padding: 0 1.5rem;
   }
 
-  .generate-pdf {
+  #cv-button {
     display: inline-block;
   }
 
