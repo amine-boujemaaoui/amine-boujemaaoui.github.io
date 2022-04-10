@@ -58,13 +58,22 @@ body.dark-theme {
   font-size: 1.2rem;
   cursor: pointer;
 }
-
 .change-theme:hover {
   color: var(--title-color);
 }
 
+/* ============ dimensioner les polices ============ */
+body.scale-cv {
+  --h1-font-size: 0.938rem;
+  --h2-font-size: 0.938rem;
+  --h3-font-size: 0.875rem;
+  --normal-font-size: 0.813rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.688rem;
+}
+
 /* ============ generer le pdf ============ */
-#cv-button {
+.generate-pdf {
   display: none;
   position: absolute;
   top: 2.2rem;
@@ -73,9 +82,12 @@ body.dark-theme {
   color: var(--text-color);
   cursor: pointer;
 }
-
 .generate-pdf:hover {
   color: var(--title-color);
+}
+
+.scale-cv .change-theme,
+.scale-cv .generate-pdf {
 }
 
 /* ========== base ========== */
@@ -480,7 +492,7 @@ img {
     padding: 0 1.5rem;
   }
 
-  #cv-button {
+  .generate-pdf {
     display: inline-block;
   }
 
