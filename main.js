@@ -129,4 +129,6 @@ buttonCV.addEventListener("click", () => {
   scaleCV();
   // 2. on genere le pdf
   generatePDF();
+  // on retire la classe apres 5 seconde
+  setTimeout(unScaleCV, 5000);
 });
