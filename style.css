@@ -62,6 +62,21 @@ body.dark-theme {
 .change-theme:hover {
   color: var(--title-color);
 }
+
+/* ============ generer le pdf ============ */
+.generate-pdf {
+  display: none;
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.generate-pdf:hover {
+  color: var(--title-color);
+}
+
 /* ========== base ========== */
 
 body {
@@ -462,6 +477,10 @@ img {
   .cv__left,
   .cv__right {
     padding: 0 1.5rem;
+  }
+
+  .generate-pdf {
+    display: inline-block;
   }
 
   .section-title,
