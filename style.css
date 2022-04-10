@@ -58,11 +58,13 @@ body.dark-theme {
   font-size: 1.2rem;
   cursor: pointer;
 }
+
 .change-theme:hover {
   color: var(--title-color);
 }
 
-/* ============ dimensioner les polices ============ */
+/* ====== redimensioner les police pour le pdf ====== */
+
 body.scale-cv {
   --h1-font-size: 0.938rem;
   --h2-font-size: 0.938rem;
@@ -82,10 +84,12 @@ body.scale-cv {
   color: var(--text-color);
   cursor: pointer;
 }
+
 #cv-button:hover {
   color: var(--title-color);
 }
 
+/* ===== changer les classes pour le pdf ===== */
 .scale-cv .change-theme,
 .scale-cv #cv-button {
   display: none;
@@ -101,6 +105,59 @@ body.scale-cv {
 
 .scale-cv .section-title {
   margin-bottom: 0.75rem;
+}
+
+.scale-cv .cv__left,
+.scale-cv .cv__right {
+  padding: 0 1rem;
+}
+
+.scale-cv .home__img {
+  width: 90px;
+  height: 90px;
+}
+
+.scale-cv .home__container {
+  gap: 1.5rem;
+}
+
+.scale-cv .home__data {
+  gap: 0.35rem;
+}
+
+.scale-cv .home__address,
+.scale-cv .social__container {
+  gap: 0.75rem;
+}
+
+.scale-cv .home__icon,
+.scale-cv .social__icon,
+.scale-cv .interests__icon {
+  font-size: 1rem;
+}
+
+.scale-cv .formation__container,
+.scale-cv .projects__container {
+  gap: 1rem;
+}
+
+.scale-cv .formation__time,
+.scale-cv .projetcs__time {
+  padding-right: 0.5rem;
+}
+
+.scale-cv .formation__circle,
+.scale-cv .projects__circle {
+  width: 11px;
+  height: 11px;
+  margin-top: 0.22rem;
+}
+
+.scale-cv .formation__line,
+.scale-cv .projects__line {
+  width: 1px;
+  height: 110%;
+  transform: translate(5px, 0);
 }
 
 /* ========== base ========== */
@@ -491,7 +548,7 @@ img {
 
   .cv {
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
+    grid-template-columns: 0.5fr 1fr;
     background-color: var(--container-color);
     box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
   }
