@@ -15,8 +15,16 @@
             <ul>
                 <li><a href="index_it.html">Home</a></li>
                 <li><a href="resume_it.html">CV</a></li>
-                <li><button onclick="switchLanguage('fr')">FR</button></li>
-                <li><button onclick="switchLanguage('en')">EN</button></li>
+                <li class="dropdown">
+                    <button class="dropbtn" id="selected-lang-btn">
+                        <img src="it.svg" alt="Italiano" class="flag">
+                    </button>
+                    <div class="dropdown-content">
+                        <button onclick="switchLanguage('fr')"><img src="fr.svg" alt="Français" class="flag"> Français</button>
+                        <button onclick="switchLanguage('en')"><img src="en.svg" alt="English" class="flag"> English</button>
+                        <button onclick="switchLanguage('it')"><img src="it.svg" alt="Italiano" class="flag"> Italiano</button>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>

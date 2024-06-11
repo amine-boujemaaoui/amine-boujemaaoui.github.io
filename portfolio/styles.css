@@ -8,17 +8,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-}
-
-nav {
-    background-color: #444;
-    color: #fff;
-    text-align: center;
-    padding: 2px 0;
-}
-
-nav h1 {
-    padding: 20px;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -29,13 +19,61 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
+    position: relative; /* Nécessaire pour le dropdown */
 }
 
 nav ul li a, nav ul li button {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+}
+
+nav .dropdown {
+    display: inline-block;
+}
+
+nav .dropdown .dropbtn {
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 0;
+}
+
+nav .dropdown .dropbtn .flag {
+    width: 24px;
+    height: 16px;
+}
+
+.flag {
+    width: 100%;
+    height: auto;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 56px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .dropdown-content a {
+    color: black;
+    padding: 2px 6px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+nav .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 main {
@@ -47,7 +85,7 @@ main {
 .cv-container {
     width: 60%;
     margin: 0 auto;
-    background-color: #c5c5c5;
+    background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -57,14 +95,6 @@ main {
 
 .section {
     margin-bottom: 20px;
-    border: 1px solid #aaa;
-}
-
-h1 {
-    margin: 0;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
 }
 
 h3 {
@@ -72,23 +102,10 @@ h3 {
     padding-bottom: 5px;
 }
 
-/* Styles spécifiques pour la version française */
-html[lang="fr"] .etat-civil p, html[lang="fr"] .experience .exp-item, html[lang="fr"] .formations .formation-item, html[lang="fr"] .competences-info div, html[lang="fr"] .competences-logiciel div, html[lang="fr"] .langues div, html[lang="fr"] .centre-dinterets div {
-    padding: 10px 0;
-    background-color: #949494;
+ .etat-civil p,  .experience .exp-item,  .formations .formation-item,  .competences-info div,  .competences-logiciel div,  .langues div,  .centre-dinterets div,
+ .personal-info p,  .experience .exp-item,  .education .education-item,  .computer-skills div,  .software-skills div,  .languages div,  .interests div,
+ .stato-civile p,  .esperienza .exp-item,  .formazione .formazione-item,  .competenze-info div,  .competenze-software div,  .lingue div,  .interessi div {
     margin-bottom: 10px;
-}
-
-/* Styles spécifiques pour la version anglaise */
-html[lang="en"] .personal-info p, html[lang="en"] .experience .exp-item, html[lang="en"] .education .education-item, html[lang="en"] .computer-skills div, html[lang="en"] .software-skills div, html[lang="en"] .languages div, html[lang="en"] .interests div {
-    padding: 10px 0;
-    background-color: #949494;
-    margin-bottom: 10px;
-}
-
-/* Styles spécifiques pour la version italienne */
-html[lang="it"] .stato-civile p, html[lang="it"] .esperienza .exp-item, html[lang="it"] .formazione .formazione-item, html[lang="it"] .competenze-info div, html[lang="it"] .competenze-software div, html[lang="it"] .lingue div, html[lang="it"] .interessi div {
-    padding: 10px 0;
-    background-color: #949494;
-    margin-bottom: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #333;
 }
