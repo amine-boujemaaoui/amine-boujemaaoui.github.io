@@ -47,7 +47,7 @@ main {
 .cv-container {
     width: 60%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #c5c5c5;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -75,13 +75,13 @@ h3 {
 /* Styles spécifiques pour la version française */
 html[lang="fr"] .etat-civil p, html[lang="fr"] .experience .exp-item, html[lang="fr"] .formations .formation-item, html[lang="fr"] .competences-info div, html[lang="fr"] .competences-logiciel div, html[lang="fr"] .langues div, html[lang="fr"] .centre-dinterets div {
     padding: 10px 0;
-    background-color: #eeeeee;
+    background-color: #949494;
     margin-bottom: 10px;
 }
 
 /* Styles spécifiques pour la version anglaise */
 html[lang="en"] .personal-info p, html[lang="en"] .experience .exp-item, html[lang="en"] .education .education-item, html[lang="en"] .computer-skills div, html[lang="en"] .software-skills div, html[lang="en"] .languages div, html[lang="en"] .interests div {
     padding: 10px 0;
-    background-color: #eeeeee;
+    background-color: #949494;
     margin-bottom: 10px;
 }
