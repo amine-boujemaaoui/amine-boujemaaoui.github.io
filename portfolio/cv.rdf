@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+    <rdf:Description rdf:about="http://example.org/cv/maeva-chery">
+        <foaf:name>Maeva Chery</foaf:name>
+        <foaf:mbox>chery.maeva@live.fr</foaf:mbox>
+        <foaf:workplaceHomepage rdf:resource="http://sanofi.com" />
+        <foaf:workInfoHomepage rdf:resource="http://example.org/business-analyst" />
+        <foaf:topic_interest>Développement Web</foaf:topic_interest>
+        <foaf:topic_interest>Programmation Java</foaf:topic_interest>
+        <foaf:topic_interest>Base de données</foaf:topic_interest>
+    </rdf:Description>
+
+</rdf:RDF>

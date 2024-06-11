@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV xml:lang="fr" lang="fr">
+    <intitule>
+        <titre>Ingénieur en informatique et réseaux</titre>
+        <commentaire>Bonne expérience en prestation informatique avec compétences en langages
+            objets, base de données, web, gestion de projet.</commentaire>
+    </intitule>
+    <etat_civil nom='CHERY' prenom='Maeva' dateNaissance='1991-10-06' age='23'>
+        <adresse numero="7" rue="Rue Aime Morot" ville="Paris" cp="75013"></adresse>
+        <telephone>0650997228</telephone>
+        <email>chery.maeva@live.fr</email>
+        <permis titulaire='oui' type='B'></permis>
+    </etat_civil>
+    <expPro>
+        <exp dateDebut='10/2012'>
+            <poste>Business Analyst and Application engineer</poste>
+            <entreprise>Sanofi</entreprise>
+            <description>Etude du besoin, Gestion de projet (Planning), outil de traitement
+                automatique du language (ontologie), java EE, intégration de données (Talend),
+                conception de base de données (oracle)</description>
+        </exp>
+        <exp dateDebut='04/2012' dateFin='07/2012'>
+            <poste>Stagiaire développeur d'application mobile</poste>
+            <entreprise>Lemon Way</entreprise>
+            <description>Développement d'application mobile iPhone, Android et BlackBerry</description>
+        </exp>
+        <exp dateDebut='2007' dateFin='2011'>
+            <poste>Emploie saisonnier : Serveuse</poste>
+            <entreprise>Restaurant La Rome des îles</entreprise>
+            <description>Comptabilité, Accueil des clients, prise de commande, prise d'addition et
+                encaissement, secrétariat, réception des appels téléphoniques</description>
+        </exp>
+    </expPro>
+    <formations>
+        <formation intituleFormation="Informatique et réseaux" niveau="Bac + 5 ou équivalent"
+            diplome="Ingénieur en informatique et réseaux" domaine='Informatique'>
+            <annee debut="2012"></annee>
+            <ecole>Sup Galilée, Paris 13</ecole>
+            <description>Base de données, Entrepôt de données, ETL, Java (Interface graphique,
+                Programmation Objet, Design pattern), C, C++,Perl, Web sémantique, Théorie des
+                languages,Algorithmique, Gestion d'entreprise, Droit du travail</description>
+            <projets>
+                <projet>Application Java permettant de faire des calcules statistiques sur un jeu de
+                    données et de visualiser les résultats sous forme de graphe</projet>
+                <projet>Jeu Java : Shoot Them up</projet>
+                <projet>Web : Création de site web</projet>
+                <projet>Web Sémantique : Portfolio</projet>
+            </projets>
+        </formation>
+        <formation intituleFormation="Système d'information, multimédia, réseaux, informatique"
+            niveau="Bac + 2 ou équivalent" diplome="DUT Service et Réseaux de Communication"
+            domaine="Réseaux d'information">
+            <annee debut="2010" fin="2012"></annee>
+            <ecole>IUT de Bobigny, Paris 13</ecole>
+            <description>Base de données, Programmation Objet, Infographie, language web,
+                développement d'application mobile, réseaux</description>
+            <projets>
+                <projet>Invention Pleaz : Site web sociale permettant au développeur de poster leur
+                    vidéo mettant en scène leurs inventions</projet>
+                <projet>Jeu Java</projet>
+            </projets>
+        </formation>
+    </formations>
+    <competencesInfo>
+        <intituleComp nom="Développement Web" list="html, xhtml, css, javascript, PHP"></intituleComp>
+        <intituleComp nom="Language de programmation" list="java, J2ME, C, C++, Perl, XML"></intituleComp>
+        <intituleComp nom="Conception base de données" list="SQL, PL-SQL, oracle, mySQL"></intituleComp>
+        <intituleComp nom="System d'exploitation" list="UNIX, WINDOWS"></intituleComp>
+    </competencesInfo>
+    <competencesLogiciel>
+        <intituleComp type="Gestion des données"
+            list="Talend (ETL),PowerAMC(conception), SQL developer(gestion base de données), MySQL (gestion base de données)"></intituleComp>
+        <intituleComp type="Design" list="Photoshop, Illustrator"></intituleComp>
+        <intituleComp type="Développement" list="Eclipse,XCode"></intituleComp>
+        <intituleComp type="Gestion de projet" list="MS Project, Gantt"></intituleComp>
+    </competencesLogiciel>
+    <langues>
+        <langue lg="Anglais" niveau="Bon"></langue>
+        <langue lg="Espagnol" niveau="Correct"></langue>
+        <langue lg="Japonais" niveau="Notions"></langue>
+    </langues>
+    <centreDinterets>
+        <centreDinteret nom="Natation (Diplôme de sauvetage)"></centreDinteret>
+        <centreDinteret nom="danse (« technik ka »,classique)"></centreDinteret>
+        <centreDinteret nom="piano (plusieurs années de pratique)"></centreDinteret>
+        <centreDinteret nom="tennis"></centreDinteret>
+        <centreDinteret nom="photographie"></centreDinteret>
+        <centreDinteret nom="arts plastiques"></centreDinteret>
+        <centreDinteret nom="lecture (policier, fantastique, science fiction)"></centreDinteret>
+    </centreDinterets>
+</CV>
