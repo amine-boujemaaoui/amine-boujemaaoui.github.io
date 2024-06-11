@@ -27,10 +27,13 @@
                     <strong>Age :</strong>
                     <xsl:value-of select="CV/etat_civil/@age" />
                 </p>
-                <p><strong>Address :</strong> <xsl:value-of select="CV/etat_civil/adresse/@numero" /> <xsl:value-of
-                        select="CV/etat_civil/adresse/@rue" />, <xsl:value-of
-                        select="CV/etat_civil/adresse/@ville" />, <xsl:value-of
-                        select="CV/etat_civil/adresse/@cp" /></p>
+                <p>
+                    <strong>Address :</strong> 
+                    <xsl:value-of select="CV/etat_civil/adresse/@numero" />
+                    <xsl:value-of select="CV/etat_civil/adresse/@rue" />, 
+                    <xsl:value-of select="CV/etat_civil/adresse/@ville" />, 
+                    <xsl:value-of select="CV/etat_civil/adresse/@cp" />
+                </p>
                 <p>
                     <strong>Phone :</strong>
                     <xsl:value-of select="CV/etat_civil/telephone" />

@@ -1,91 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CV xml:lang="fr" lang="fr">
     <intitule>
-        <titre>Ingénieur en informatique et réseaux</titre>
+        <titre>Apprenti ingénieur en informatique</titre>
         <commentaire>Bonne expérience en prestation informatique avec compétences en langages
-            objets, base de données, web, gestion de projet.</commentaire>
+            objets, bases de données, web, gestion de projet.</commentaire>
     </intitule>
-    <etat_civil nom='CHERY' prenom='Maeva' dateNaissance='1991-10-06' age='23'>
-        <adresse numero="7" rue="Rue Aime Morot" ville="Paris" cp="75013"></adresse>
-        <telephone>0650997228</telephone>
-        <email>chery.maeva@live.fr</email>
+    <etat_civil nom='BOUJEMAAOUI' prenom='Amine' dateNaissance='2000-07-09' age='23'>
+        <adresse numero="8" rue="Rue de Vienne" ville="Bobigny" cp="93000"></adresse>
+        <telephone>0769809038</telephone>
+        <email>amine.boujemaaoui.1@gmail.com</email>
         <permis titulaire='oui' type='B'></permis>
     </etat_civil>
     <expPro>
-        <exp dateDebut='10/2012'>
-            <poste>Business Analyst and Application engineer</poste>
-            <entreprise>Sanofi</entreprise>
-            <description>Etude du besoin, Gestion de projet (Planning), outil de traitement
-                automatique du language (ontologie), java EE, intégration de données (Talend),
-                conception de base de données (oracle)</description>
+        <exp dateDebut='09/2023'>
+            <poste>Développeur IBMi</poste>
+            <entreprise>CEGID</entreprise>
+            <description>Intégré à une équipe de 15 personnes, je programme des fonctionnalités pour
+                un produit de paie, principalement avec les technologies IBM (90%) et Java. Je
+                conçois l'application, analyse les spécifications techniques, choisis les solutions
+                adéquates, exécute les scénarios de tests, et améliore l'ergonomie UX/UI.</description>
         </exp>
-        <exp dateDebut='04/2012' dateFin='07/2012'>
-            <poste>Stagiaire développeur d'application mobile</poste>
-            <entreprise>Lemon Way</entreprise>
-            <description>Développement d'application mobile iPhone, Android et BlackBerry</description>
-        </exp>
-        <exp dateDebut='2007' dateFin='2011'>
-            <poste>Emploie saisonnier : Serveuse</poste>
+        <exp dateDebut='04/2022' dateFin='06/2022'>
+            <poste>Stage Développeur web</poste>
             <entreprise>Restaurant La Rome des îles</entreprise>
-            <description>Comptabilité, Accueil des clients, prise de commande, prise d'addition et
-                encaissement, secrétariat, réception des appels téléphoniques</description>
+            <description>Maintenance évolutive et corrective de la
+                plateforme d'e-learning macertif en méthodologie
+                Scrum</description>
         </exp>
     </expPro>
     <formations>
-        <formation intituleFormation="Informatique et réseaux" niveau="Bac + 5 ou équivalent"
-            diplome="Ingénieur en informatique et réseaux" domaine='Informatique'>
-            <annee debut="2012"></annee>
-            <ecole>Sup Galilée, Paris 13</ecole>
-            <description>Base de données, Entrepôt de données, ETL, Java (Interface graphique,
-                Programmation Objet, Design pattern), C, C++,Perl, Web sémantique, Théorie des
-                languages,Algorithmique, Gestion d'entreprise, Droit du travail</description>
+        <formation intituleFormation="Ingénieur Informatique" niveau="Bac + 5 ou équivalent"
+            diplome="Ingénieur Informatique" domaine='Informatique'>
+            <annee debut="2022"></annee>
+            <ecole>Sup Galilée, Sorbonne Paris Nord</ecole>
+            <description>Bases de données, Java (Interface graphique,
+                Programmation Objet, Design pattern), C, C++, Web sémantique, Théorie des
+                langages, Algorithmique, Gestion d'entreprise, Droit du travail</description>
             <projets>
-                <projet>Application Java permettant de faire des calcules statistiques sur un jeu de
-                    données et de visualiser les résultats sous forme de graphe</projet>
-                <projet>Jeu Java : Shoot Them up</projet>
-                <projet>Web : Création de site web</projet>
-                <projet>Web Sémantique : Portfolio</projet>
+                <projet>Projet Java: simulation d'un écosystème d'êtres vivants</projet>
+                <projet>Projet web: création d'un site web en React informant sur les films</projet>
+                <projet>Projet C: Calcul d'itinéraire le plus optimal en métro</projet>
             </projets>
         </formation>
-        <formation intituleFormation="Système d'information, multimédia, réseaux, informatique"
-            niveau="Bac + 2 ou équivalent" diplome="DUT Service et Réseaux de Communication"
-            domaine="Réseaux d'information">
-            <annee debut="2010" fin="2012"></annee>
-            <ecole>IUT de Bobigny, Paris 13</ecole>
-            <description>Base de données, Programmation Objet, Infographie, language web,
+        <formation intituleFormation="DUT Informatique"
+            niveau="Bac + 2 ou équivalent" diplome="DUT Informatique"
+            domaine="Informatique">
+            <annee debut="2020" fin="2022"></annee>
+            <ecole>IUT de Villetaneuse, Sorbonne Paris Nord</ecole>
+            <description>Bases de données, Programmation Objet, Infographie, langages web,
                 développement d'application mobile, réseaux</description>
             <projets>
-                <projet>Invention Pleaz : Site web sociale permettant au développeur de poster leur
-                    vidéo mettant en scène leurs inventions</projet>
-                <projet>Jeu Java</projet>
+                <projet>Projet Python: Jeu d'échecs à deux sur un terminal avec sauvegarde de partie</projet>
+                <projet>Projet web: Création d'un site de vente de bijoux en ligne</projet>
             </projets>
         </formation>
     </formations>
     <competencesInfo>
-        <intituleComp nom="Développement Web" list="html, xhtml, css, javascript, PHP"></intituleComp>
-        <intituleComp nom="Language de programmation" list="java, J2ME, C, C++, Perl, XML"></intituleComp>
-        <intituleComp nom="Conception base de données" list="SQL, PL-SQL, oracle, mySQL"></intituleComp>
-        <intituleComp nom="System d'exploitation" list="UNIX, WINDOWS"></intituleComp>
+        <intituleComp nom="Développement Web" list="html, css, javascript, PHP"></intituleComp>
+        <intituleComp nom="Langages de programmation" list="java, C, C++, Perl, XML"></intituleComp>
+        <intituleComp nom="Conception bases de données" list="SQL, PL-SQL, oracle, mySQL"></intituleComp>
+        <intituleComp nom="Systèmes d'exploitation" list="UNIX, WINDOWS"></intituleComp>
     </competencesInfo>
     <competencesLogiciel>
         <intituleComp type="Gestion des données"
-            list="Talend (ETL),PowerAMC(conception), SQL developer(gestion base de données), MySQL (gestion base de données)"></intituleComp>
-        <intituleComp type="Design" list="Photoshop, Illustrator"></intituleComp>
-        <intituleComp type="Développement" list="Eclipse,XCode"></intituleComp>
-        <intituleComp type="Gestion de projet" list="MS Project, Gantt"></intituleComp>
+            list="SQL Developer (gestion bases de données), MySQL (gestion bases de données)"></intituleComp>
+        <intituleComp type="Développement" list="Eclipse, VSCode, IntelliJ IDEA"></intituleComp>
+        <intituleComp type="Gestion de projet" list="Gantt, Jira, Azure DevOps"></intituleComp>
     </competencesLogiciel>
     <langues>
         <langue lg="Anglais" niveau="Bon"></langue>
-        <langue lg="Espagnol" niveau="Correct"></langue>
-        <langue lg="Japonais" niveau="Notions"></langue>
     </langues>
     <centreDinterets>
-        <centreDinteret nom="Natation (Diplôme de sauvetage)"></centreDinteret>
-        <centreDinteret nom="danse (« technik ka »,classique)"></centreDinteret>
-        <centreDinteret nom="piano (plusieurs années de pratique)"></centreDinteret>
-        <centreDinteret nom="tennis"></centreDinteret>
-        <centreDinteret nom="photographie"></centreDinteret>
-        <centreDinteret nom="arts plastiques"></centreDinteret>
-        <centreDinteret nom="lecture (policier, fantastique, science fiction)"></centreDinteret>
+        <centreDinteret nom="JDM (Japanese Domestic Market, automobile japonais)"></centreDinteret>
+        <centreDinteret nom="Formula Drift"></centreDinteret>
+        <centreDinteret nom="Airsoft"></centreDinteret>
+        <centreDinteret nom="Lecture (policier, mangas)"></centreDinteret>
     </centreDinterets>
 </CV>

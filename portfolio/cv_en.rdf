@@ -3,13 +3,12 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/">
 
     <rdf:Description rdf:about="http://example.org/cv/maeva-chery">
-        <foaf:name>Maeva Chery</foaf:name>
-        <foaf:mbox>chery.maeva@live.fr</foaf:mbox>
-        <foaf:workplaceHomepage rdf:resource="http://sanofi.com" />
-        <foaf:workInfoHomepage rdf:resource="http://example.org/business-analyst" />
+        <foaf:name>Amine BOUJEMAAOUI</foaf:name>
+        <foaf:mbox>amine.boujemaaoui.1@gmail.com</foaf:mbox>
+        <foaf:workplaceHomepage rdf:resource="http://cegid.com" />
+        <foaf:workInfoHomepage rdf:resource="http://example.org/developer" />
         <foaf:topic_interest>Web Development</foaf:topic_interest>
         <foaf:topic_interest>Java Programming</foaf:topic_interest>
-        <foaf:topic_interest>Database Design</foaf:topic_interest>
     </rdf:Description>
 
 </rdf:RDF>
