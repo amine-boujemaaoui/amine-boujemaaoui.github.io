@@ -85,3 +85,10 @@ html[lang="en"] .personal-info p, html[lang="en"] .experience .exp-item, html[la
     background-color: #949494;
     margin-bottom: 10px;
 }
+
+/* Styles spécifiques pour la version italienne */
+html[lang="it"] .stato-civile p, html[lang="it"] .esperienza .exp-item, html[lang="it"] .formazione .formazione-item, html[lang="it"] .competenze-info div, html[lang="it"] .competenze-software div, html[lang="it"] .lingue div, html[lang="it"] .interessi div {
+    padding: 10px 0;
+    background-color: #949494;
+    margin-bottom: 10px;
+}

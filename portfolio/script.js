@@ -8,7 +8,7 @@ function switchLanguage(lang) {
         } else if (url.includes('about.html')) {
             window.location.href = 'about_en.html';
         }
-    } else {
+    } else if (lang === 'fr') {
         if (url.includes('index_en.html')) {
             window.location.href = 'index.html';
         } else if (url.includes('resume_en.html')) {
@@ -16,14 +16,22 @@ function switchLanguage(lang) {
         } else if (url.includes('about_en.html')) {
             window.location.href = 'about.html';
         }
+    } else if (lang === 'it') {
+        if (url.includes('index.html') || url.includes('index_en.html')) {
+            window.location.href = 'index_it.html';
+        } else if (url.includes('resume.html') || url.includes('resume_en.html')) {
+            window.location.href = 'resume_it.html';
+        } else if (url.includes('about.html') || url.includes('about_en.html')) {
+            window.location.href = 'about_it.html';
+        }
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     if (window.location.pathname.includes('resume')) {
-        const lang = window.location.pathname.includes('_en') ? 'en' : 'fr';
-        const xmlFile = lang === 'en' ? 'cv_en.xml' : 'cv.xml';
-        const xslFile = lang === 'en' ? 'cv_en.xsl' : 'cv.xsl';
+        const lang = window.location.pathname.includes('_en') ? 'en' : (window.location.pathname.includes('_it') ? 'it' : 'fr');
+        const xmlFile = lang === 'en' ? 'cv_en.xml' : (lang === 'it' ? 'cv_it.xml' : 'cv.xml');
+        const xslFile = lang === 'en' ? 'cv_en.xsl' : (lang === 'it' ? 'cv_it.xsl' : 'cv.xsl');
         
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
