@@ -8,7 +8,7 @@ function switchLanguage(lang) {
     } else if (currentPath.includes('resume')) {
         newPath = lang === 'fr' ? '/portfolio/resume.html' : `/portfolio/${lang}/resume.html`;
     } else {
-        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index.html`; // Default to index page if no match
+        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index.html`;
     }
 
     window.location.href = newPath;
