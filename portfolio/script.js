@@ -42,8 +42,8 @@ function setInitialLanguage() {
 
 function updateFlag(lang) {
     const flagSrc = {
-        'en': '../img/en.svg',
         'fr': 'img/fr.svg',
+        'en': '../img/en.svg',
         'ru': '../img/ru.svg'
     };
     document.getElementById('selected-lang-btn').innerHTML = `<img src="${flagSrc[lang]}" alt="${lang}" class="flag">`;
