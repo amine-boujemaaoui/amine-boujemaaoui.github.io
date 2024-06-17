@@ -54,26 +54,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (window.location.pathname.includes('resume')) {
         const lang = window.location.pathname.includes('_en') ? 'en' : (window.location.pathname.includes('_ru') ? 'ru' : 'fr');
-        const xmlFile = `../xml/cv${lang === 'fr' ? '_fr' : `_${lang}`}.xml`;
-        const xslFile = `../xsl/cv${lang === 'fr' ? '_fr' : `_${lang}`}.xsl`;
+        
+        const paths = {
+            fr: {
+                xml: 'xml/cv_fr.xml',
+                xsl: 'xsl/cv_fr.xsl'
+            },
+            en: {
+                xml: '../xml/cv_en.xml',
+                xsl: '../xsl/cv_en.xsl'
+            },
+            ru: {
+                xml: '../xml/cv_ru.xml',
+                xsl: '../xsl/cv_ru.xsl'
+            }
+        };
+
+        const xmlFile = paths[lang].xml;
+        const xslFile = paths[lang].xsl;
 
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
             const xml = this.responseXML;
-            const xsl = getXSL(xslFile);
-            if (xsl) {
-                const processor = new XSLTProcessor();
-                processor.importStylesheet(xsl);
-                const resultDocument = processor.transformToFragment(xml, document);
-                document.getElementById("cv-content").appendChild(resultDocument);
-            } else {
-                console.error(`Failed to load XSL file: ${xslFile}`);
-            }
+            loadXSL(xslFile, xml);
         };
         xhttp.open("GET", xmlFile, true);
         xhttp.send();
     }
 });
+
+function loadXSL(xslFile, xml) {
+    const xhttpXSL = new XMLHttpRequest();
+    xhttpXSL.onload = function() {
+        const xsl = this.responseXML;
+        if (xsl) {
+            const processor = new XSLTProcessor();
+            processor.importStylesheet(xsl);
+            const resultDocument = processor.transformToFragment(xml, document);
+            document.getElementById("cv-content").appendChild(resultDocument);
+        } else {
+            console.error(`Failed to load XSL file: ${xslFile}`);
+        }
+    };
+    xhttpXSL.open("GET", xslFile, true);
+    xhttpXSL.send();
+}
+
 
 function getXSL(xslFile) {
     const xhttp = new XMLHttpRequest();
