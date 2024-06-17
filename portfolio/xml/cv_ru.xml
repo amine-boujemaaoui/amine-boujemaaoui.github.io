@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV xml:lang="ru" lang="ru">
+    <intitule>
+        <titre>Стажер по компьютерной инженерии</titre>
+        <commentaire>Хороший опыт в ИТ-услугах с навыками работы с объектно-ориентированными
+            языками, базами данных, веб-разработкой и управлением проектами.</commentaire>
+    </intitule>
+    <etat_civil nom='BOUJEMAAOUI' prenom='Amine' dateNaissance='2000-07-09' age='23'>
+        <adresse numero="8" rue="Rue de Vienne" ville="Bobigny" cp="93000"></adresse>
+        <telephone>0769809038</telephone>
+        <email>amine.boujemaaoui.1@gmail.com</email>
+        <permis titulaire='oui' type='B'></permis>
+    </etat_civil>
+    <expPro>
+        <exp dateDebut='09/2023'>
+            <poste>Разработчик IBMi</poste>
+            <entreprise>CEGID</entreprise>
+            <description>Интеграция в команду из 15 человек, разработка функций для продукта по
+                управлению заработной платой, в основном с использованием технологий IBM (90%) и
+                Java. Проектирование приложения, анализ технических спецификаций, выбор подходящих
+                решений, выполнение тестовых сценариев и улучшение UX/UI эргономики.</description>
+        </exp>
+        <exp dateDebut='04/2022' dateFin='06/2022'>
+            <poste>Стажер веб-разработчик</poste>
+            <entreprise>Ресторан La Rome des îles</entreprise>
+            <description>Эволюционная и корректирующая поддержка платформы электронного обучения
+                macertif с использованием методологии Scrum.</description>
+        </exp>
+    </expPro>
+    <formations>
+        <formation intituleFormation="Компьютерная инженерия" niveau="Магистратура или эквивалент"
+            diplome="Инженер-компьютерщик" domaine='Компьютерные науки'>
+            <annee debut="2022"></annee>
+            <ecole>Sup Galilée, Sorbonne Paris Nord</ecole>
+            <description>Базы данных, Java (графический интерфейс, объектно-ориентированное
+                программирование, шаблоны проектирования), C, C++, семантическая веб-технология,
+                теория языков, алгоритмы, управление бизнесом, трудовое право</description>
+            <projets>
+                <projet>Проект на Java: Симуляция экосистемы живых существ</projet>
+                <projet>Проект веб: Создание информационного сайта о фильмах с использованием React</projet>
+                <projet>Проект на C: Расчет наиболее оптимального маршрута метро</projet>
+            </projets>
+        </formation>
+        <formation intituleFormation="DUT по информатике"
+            niveau="Ассоциированная степень или эквивалент" diplome="DUT по информатике"
+            domaine="Компьютерные науки">
+            <annee debut="2020" fin="2022"></annee>
+            <ecole>IUT de Villetaneuse, Sorbonne Paris Nord</ecole>
+            <description>Базы данных, объектно-ориентированное программирование, компьютерная
+                графика, веб-языки, разработка мобильных приложений, сети</description>
+            <projets>
+                <projet>Проект на Python: Шахматная игра для двух игроков на терминале с функцией
+                    сохранения игры</projet>
+                <projet>Проект веб: Создание интернет-магазина украшений</projet>
+            </projets>
+        </formation>
+    </formations>
+    <competencesInfo>
+        <intituleComp nom="Веб-разработка" list="html, css, javascript, PHP"></intituleComp>
+        <intituleComp nom="Языки программирования" list="java, C, C++, Perl, XML"></intituleComp>
+        <intituleComp nom="Проектирование баз данных" list="SQL, PL-SQL, Oracle, MySQL"></intituleComp>
+        <intituleComp nom="Операционные системы" list="UNIX, WINDOWS"></intituleComp>
+    </competencesInfo>
+    <competencesLogiciel>
+        <intituleComp type="Управление данными"
+            list="SQL Developer (управление базами данных), MySQL (управление базами данных)"></intituleComp>
+        <intituleComp type="Разработка" list="Eclipse, VSCode, IntelliJ IDEA"></intituleComp>
+        <intituleComp type="Управление проектами" list="Gantt, Jira, Azure DevOps"></intituleComp>
+    </competencesLogiciel>
+    <langues>
+        <langue lg="Английский" niveau="Хороший"></langue>
+    </langues>
+    <centreDinterets>
+        <centreDinteret nom="JDM (Japanese Domestic Market, японские автомобили)"></centreDinteret>
+        <centreDinteret nom="Formula Drift"></centreDinteret>
+        <centreDinteret nom="Airsoft"></centreDinteret>
+        <centreDinteret nom="Чтение (детективные романы, манга)"></centreDinteret>
+    </centreDinterets>
+</CV>

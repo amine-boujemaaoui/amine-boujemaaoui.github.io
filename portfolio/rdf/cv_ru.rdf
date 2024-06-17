@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:cv="http://rdfs.org/resume-rdf/">
+    <cv:CV>
+        <cv:summary>Хороший опыт в ИТ-услугах с навыками работы с объектно-ориентированными языками,
+            базами данных, веб-разработкой и управлением проектами.</cv:summary>
+        <foaf:Person>
+            <foaf:name>Amine Boujemaaoui</foaf:name>
+            <cv:hasContactInfo>
+                <cv:ContactInfo>
+                    <cv:address>8 Rue de Vienne, Bobigny, 93000</cv:address>
+                    <cv:phone>0769809038</cv:phone>
+                    <cv:email>amine.boujemaaoui.1@gmail.com</cv:email>
+                </cv:ContactInfo>
+            </cv:hasContactInfo>
+            <cv:hasWorkHistory>
+                <cv:Position>
+                    <cv:employedIn>
+                        <cv:Organization>
+                            <foaf:name>CEGID</foaf:name>
+                        </cv:Organization>
+                    </cv:employedIn>
+                    <cv:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09</cv:startDate>
+                    <cv:positionTitle>Разработчик IBMi</cv:positionTitle>
+                    <cv:description>Интеграция в команду из 15 человек, разработка функций для
+                        продукта по управлению заработной платой, в основном с использованием
+                        технологий IBM (90%) и Java. Проектирование приложения, анализ технических
+                        спецификаций, выбор подходящих решений, выполнение тестовых сценариев и
+                        улучшение UX/UI эргономики.</cv:description>
+                </cv:Position>
+                <cv:Position>
+                    <cv:employedIn>
+                        <cv:Organization>
+                            <foaf:name>Ресторан La Rome des îles</foaf:name>
+                        </cv:Organization>
+                    </cv:employedIn>
+                    <cv:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-04</cv:startDate>
+                    <cv:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-06</cv:endDate>
+                    <cv:positionTitle>Стажер веб-разработчик</cv:positionTitle>
+                    <cv:description>Эволюционная и корректирующая поддержка платформы электронного
+                        обучения macertif с использованием методологии Scrum.</cv:description>
+                </cv:Position>
+            </cv:hasWorkHistory>
+            <cv:hasEducation>
+                <cv:EducationEvent>
+                    <cv:degree>Инженер-компьютерщик</cv:degree>
+                    <cv:majorFieldOfStudy>Компьютерные науки</cv:majorFieldOfStudy>
+                    <cv:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022</cv:startDate>
+                    <cv:institution>
+                        <cv:Organization>
+                            <foaf:name>Sup Galilée, Sorbonne Paris Nord</foaf:name>
+                        </cv:Organization>
+                    </cv:institution>
+                </cv:EducationEvent>
+                <cv:EducationEvent>
+                    <cv:degree>DUT по информатике</cv:degree>
+                    <cv:majorFieldOfStudy>Компьютерные науки</cv:majorFieldOfStudy>
+                    <cv:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020</cv:startDate>
+                    <cv:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022</cv:endDate>
+                    <cv:institution>
+                        <cv:Organization>
+                            <foaf:name>IUT de Villetaneuse, Sorbonne Paris Nord</foaf:name>
+                        </cv:Organization>
+                    </cv:institution>
+                </cv:EducationEvent>
+            </cv:hasEducation>
+            <cv:hasSkill>
+                <cv:Skill>html, css, javascript, PHP</cv:Skill>
+                <cv:Skill>java, C, C++, Perl, XML</cv:Skill>
+                <cv:Skill>SQL, PL-SQL, Oracle, MySQL</cv:Skill>
+                <cv:Skill>UNIX, WINDOWS</cv:Skill>
+            </cv:hasSkill>
+            <cv:hasLanguage>
+                <cv:Language>Английский</cv:Language>
+            </cv:hasLanguage>
+            <cv:hasInterest>
+                <cv:Interest>JDM (Japanese Domestic Market, японские автомобили)</cv:Interest>
+                <cv:Interest>Formula Drift</cv:Interest>
+                <cv:Interest>Airsoft</cv:Interest>
+                <cv:Interest>Чтение (детективные романы, манга)</cv:Interest>
+            </cv:hasInterest>
+        </foaf:Person>
+    </cv:CV>
+</rdf:RDF>

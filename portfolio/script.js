@@ -4,13 +4,11 @@ function switchLanguage(lang) {
 
     let newPath;
     if (currentPath.includes('index')) {
-        newPath = lang === 'fr' ? 'index.html' : `index_${lang}.html`;
+        newPath = lang === 'fr' ? '/index.html' : `/${lang}/index_${lang}.html`;
     } else if (currentPath.includes('resume')) {
-        newPath = lang === 'fr' ? 'resume.html' : `resume_${lang}.html`;
-    } else if (currentPath.includes('about')) {
-        newPath = lang === 'fr' ? 'about.html' : `about_${lang}.html`;
+        newPath = lang === 'fr' ? '/resume.html' : `/${lang}/resume_${lang}.html`;
     } else {
-        newPath = lang === 'fr' ? 'index.html' : `index_${lang}.html`; // Default to index page if no match
+        newPath = lang === 'fr' ? '/index.html' : `/${lang}/index_${lang}.html`; // Default to index page if no match
     }
 
     window.location.href = newPath;
@@ -19,7 +17,7 @@ function switchLanguage(lang) {
 function setInitialLanguage() {
     const userLang = navigator.language || navigator.userLanguage;
     const langCode = userLang.split('-')[0];
-    const supportedLangs = ['en', 'fr', 'it'];
+    const supportedLangs = ['en', 'fr', 'ru'];
     const defaultLang = 'fr';
 
     let selectedLang = supportedLangs.includes(langCode) ? langCode : defaultLang;
@@ -27,7 +25,14 @@ function setInitialLanguage() {
     const currentUrl = new URL(window.location.href);
     const currentPath = currentUrl.pathname;
 
-    const currentLang = supportedLangs.find(lang => lang === 'fr' ? !currentPath.includes('_en') && !currentPath.includes('_it') : currentPath.includes(`_${lang}`));
+    const currentLang = supportedLangs.find(lang => {
+        if (lang === 'fr') {
+            return !currentPath.includes('_en') && !currentPath.includes('_ru');
+        } else {
+            return currentPath.includes(`_${lang}`);
+        }
+    });
+
     if (!currentLang) {
         switchLanguage(selectedLang);
     } else {
@@ -37,9 +42,9 @@ function setInitialLanguage() {
 
 function updateFlag(lang) {
     const flagSrc = {
-        'en': 'en.svg',
-        'fr': 'fr.svg',
-        'it': 'it.svg'
+        'en': '../img/en.svg',
+        'fr': 'img/fr.svg',
+        'ru': '../img/ru.svg'
     };
     document.getElementById('selected-lang-btn').innerHTML = `<img src="${flagSrc[lang]}" alt="${lang}" class="flag">`;
 }
@@ -48,18 +53,22 @@ document.addEventListener("DOMContentLoaded", function() {
     setInitialLanguage();
 
     if (window.location.pathname.includes('resume')) {
-        const lang = window.location.pathname.includes('_en') ? 'en' : (window.location.pathname.includes('_it') ? 'it' : 'fr');
-        const xmlFile = lang === 'en' ? 'cv_en.xml' : (lang === 'it' ? 'cv_it.xml' : 'cv.xml');
-        const xslFile = lang === 'en' ? 'cv_en.xsl' : (lang === 'it' ? 'cv_it.xsl' : 'cv.xsl');
-        
+        const lang = window.location.pathname.includes('_en') ? 'en' : (window.location.pathname.includes('_ru') ? 'ru' : 'fr');
+        const xmlFile = `../xml/cv${lang === 'fr' ? '_fr' : `_${lang}`}.xml`;
+        const xslFile = `../xsl/cv${lang === 'fr' ? '_fr' : `_${lang}`}.xsl`;
+
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
             const xml = this.responseXML;
             const xsl = getXSL(xslFile);
-            const processor = new XSLTProcessor();
-            processor.importStylesheet(xsl);
-            const resultDocument = processor.transformToFragment(xml, document);
-            document.getElementById("cv-content").appendChild(resultDocument);
+            if (xsl) {
+                const processor = new XSLTProcessor();
+                processor.importStylesheet(xsl);
+                const resultDocument = processor.transformToFragment(xml, document);
+                document.getElementById("cv-content").appendChild(resultDocument);
+            } else {
+                console.error(`Failed to load XSL file: ${xslFile}`);
+            }
         };
         xhttp.open("GET", xmlFile, true);
         xhttp.send();
@@ -70,5 +79,5 @@ function getXSL(xslFile) {
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET", xslFile, false);
     xhttp.send();
-    return xhttp.responseXML;
+    return xhttp.status === 200 ? xhttp.responseXML : null;
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <title property="name">Портфолио</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="alternate" type="application/rdf+xml" href="../rdf/cv_ru.rdf" title="CV RDF">
+</head>
+
+<body>
+    <header property="header">
+        <h1 property="headline">Добро пожаловать в мое портфолио</h1>
+        <nav property="navigation">
+            <ul>
+                <li><a href="index_ru.html">Главная</a></li>
+                <li><a href="resume_ru.html">Резюме</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn" id="selected-lang-btn">
+                        <img src="../img/ru.svg" alt="Русский" class="flag">
+                    </button>
+                    <div class="dropdown-content">
+                        <button onclick="switchLanguage('fr')"><img src="../img/fr.svg" alt="Français" class="flag"></button>
+                        <button onclick="switchLanguage('en')"><img src="../img/en.svg" alt="English" class="flag"></button>
+                        <button onclick="switchLanguage('ru')"><img src="../img/ru.svg" alt="Русский" class="flag"></button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main property="mainContent">
+        <section typeof="AboutPage">
+            <h2>Главная</h2>
+            <p>Добро пожаловать в мое личное портфолио.</p>
+            <p>Я увлеченный, настойчивый и преданный делу человек. Я владею различными языками программирования.
+                Автономный, но способный работать в команде. Я стремлюсь совершенствовать свои навыки, чтобы поступить в
+                инженерную школу.</p>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+
+</html>

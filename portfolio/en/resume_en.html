@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr" vocab="http://schema.org/" typeof="WebPage">
+<html lang="en" vocab="http://schema.org/" typeof="WebPage">
 
 <head>
     <meta charset="UTF-8">
-    <title property="name">CV - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="alternate" type="application/rdf+xml" href="cv.rdf" title="CV RDF">
+    <title property="name">Resume - Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="alternate" type="application/rdf+xml" href="../rdf/cv_en.rdf" title="CV RDF">
 </head>
 
 <body>
     <header property="header">
-        <h1 property="headline">Mon CV</h1>
+        <h1 property="headline">My Resume</h1>
         <nav property="navigation">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="resume.html">CV</a></li>
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="resume_en.html">Resume</a></li>
                 <li class="dropdown">
                     <button class="dropbtn" id="selected-lang-btn">
-                        <img src="img/fr.svg" alt="Français" class="flag">
+                        <img src="../img/it.svg" alt="Italiano" class="flag">
                     </button>
                     <div class="dropdown-content">
                         <button onclick="switchLanguage('fr')"><img src="../img/fr.svg" alt="Français" class="flag"></button>
@@ -30,10 +30,10 @@
     </header>
     <main property="mainContent">
         <div id="cv-content" typeof="Person">
-            <!-- Le contenu transformé du CV apparaîtra ici -->
+            <!-- Transformed CV content will appear here -->
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
