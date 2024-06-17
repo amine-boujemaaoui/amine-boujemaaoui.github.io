@@ -4,11 +4,11 @@ function switchLanguage(lang) {
 
     let newPath;
     if (currentPath.includes('index')) {
-        newPath = lang === 'fr' ? '/index.html' : `/${lang}/index_${lang}.html`;
+        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index_${lang}.html`;
     } else if (currentPath.includes('resume')) {
-        newPath = lang === 'fr' ? '/resume.html' : `/${lang}/resume_${lang}.html`;
+        newPath = lang === 'fr' ? '/portfolio/resume.html' : `/portfolio/${lang}/resume_${lang}.html`;
     } else {
-        newPath = lang === 'fr' ? '/index.html' : `/${lang}/index_${lang}.html`; // Default to index page if no match
+        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index_${lang}.html`; // Default to index page if no match
     }
 
     window.location.href = newPath;
