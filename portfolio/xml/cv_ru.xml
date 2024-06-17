@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CV xml:lang="ru" lang="ru">
+<!DOCTYPE CV SYSTEM "../dtd/cv_ru.dtd">
+<CV lang="ru">
     <intitule>
         <titre>Стажер по компьютерной инженерии</titre>
         <commentaire>Хороший опыт в ИТ-услугах с навыками работы с объектно-ориентированными

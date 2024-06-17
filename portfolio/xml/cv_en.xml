@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CV xml:lang="en" lang="en">
+<!DOCTYPE CV SYSTEM "../dtd/cv_en.dtd">
+<CV lang="en">
     <intitule>
         <titre>Apprentice Computer Engineer</titre>
         <commentaire>Good experience in IT services with skills in object-oriented languages,

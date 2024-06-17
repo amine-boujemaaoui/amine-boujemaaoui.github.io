@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CV xml:lang="fr" lang="fr">
+<!DOCTYPE CV SYSTEM "../dtd/cv_fr.dtd">
+<CV lang="fr">
     <intitule>
         <titre>Apprenti ingénieur en informatique</titre>
         <commentaire>Bonne expérience en prestation informatique avec compétences en langages

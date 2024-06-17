@@ -1,0 +1,52 @@
+<!ELEMENT CV (intitule,etat_civil,expPro,formations,competencesInfo,competencesLogiciel,langues,centreDinterets)>
+<!ATTLIST CV lang NMTOKEN #REQUIRED>
+<!ELEMENT intitule (titre,commentaire)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT commentaire (#PCDATA)>
+<!ELEMENT etat_civil (adresse,telephone,email,permis)>
+<!ATTLIST etat_civil nom NMTOKEN #REQUIRED>
+<!ATTLIST etat_civil prenom NMTOKEN #REQUIRED>
+<!ATTLIST etat_civil dateNaissance NMTOKEN #REQUIRED>
+<!ATTLIST etat_civil age NMTOKEN #REQUIRED>
+<!ELEMENT adresse EMPTY>
+<!ATTLIST adresse numero NMTOKEN #REQUIRED>
+<!ATTLIST adresse rue CDATA #REQUIRED>
+<!ATTLIST adresse ville NMTOKEN #REQUIRED>
+<!ATTLIST adresse cp NMTOKEN #REQUIRED>
+<!ELEMENT telephone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT permis EMPTY>
+<!ATTLIST permis titulaire NMTOKEN #REQUIRED>
+<!ATTLIST permis type NMTOKEN #REQUIRED>
+<!ELEMENT expPro (exp+)>
+<!ELEMENT exp (poste,entreprise,description)>
+<!ATTLIST exp dateDebut CDATA #REQUIRED>
+<!ATTLIST exp dateFin CDATA #IMPLIED>
+<!ELEMENT poste (#PCDATA)>
+<!ELEMENT entreprise (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT formations (formation+)>
+<!ELEMENT formation (annee,ecole,description,projets)>
+<!ATTLIST formation intituleFormation CDATA #REQUIRED>
+<!ATTLIST formation niveau CDATA #REQUIRED>
+<!ATTLIST formation diplome CDATA #REQUIRED>
+<!ATTLIST formation domaine CDATA #REQUIRED>
+<!ELEMENT annee EMPTY>
+<!ATTLIST annee debut NMTOKEN #REQUIRED>
+<!ATTLIST annee fin NMTOKEN #IMPLIED>
+<!ELEMENT ecole (#PCDATA)>
+<!ELEMENT projets (projet+)>
+<!ELEMENT projet (#PCDATA)>
+<!ELEMENT competencesInfo (intituleComp+)>
+<!ELEMENT intituleComp EMPTY>
+<!ATTLIST intituleComp nom CDATA #IMPLIED>
+<!ATTLIST intituleComp list CDATA #REQUIRED>
+<!ATTLIST intituleComp type CDATA #IMPLIED>
+<!ELEMENT competencesLogiciel (intituleComp+)>
+<!ELEMENT langues (langue)>
+<!ELEMENT langue EMPTY>
+<!ATTLIST langue lg NMTOKEN #REQUIRED>
+<!ATTLIST langue niveau NMTOKEN #REQUIRED>
+<!ELEMENT centreDinterets (centreDinteret+)>
+<!ELEMENT centreDinteret EMPTY>
+<!ATTLIST centreDinteret nom CDATA #REQUIRED>
