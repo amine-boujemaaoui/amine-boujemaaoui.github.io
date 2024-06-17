@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE CV SYSTEM "../dtd/cv_ru.dtd">
+<!DOCTYPE CV SYSTEM "../dtd/cv.dtd">
 <CV lang="ru">
     <intitule>
         <titre>Стажер по компьютерной инженерии</titre>
