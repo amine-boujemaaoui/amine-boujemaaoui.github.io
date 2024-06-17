@@ -3,14 +3,33 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    padding-left: 10ex;
+    padding-top: 10px 0;
+    
+}
+
+header h1 {
+    margin: 0;
+    padding: 25px;
+    padding-bottom: 0;
+}
+
+nav {
+    margin-top: 15px;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 5ex;
 }
 
 nav ul {
@@ -18,6 +37,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -28,7 +48,7 @@ nav ul li {
 nav ul li a, nav ul li button {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 nav .dropdown {
@@ -36,7 +56,7 @@ nav .dropdown {
 }
 
 nav .dropdown .dropbtn {
-    background-color: #333;
+    background-color: #444;
     border: none;
     cursor: pointer;
     color: #fff;
@@ -83,7 +103,7 @@ main {
     text-align: center;
     margin-left: 20ex;
     margin-right: 20ex;
-    min-height: 82vh;
+    flex: 1; /* Permet à main de prendre l'espace disponible */
 }
 
 .hidden {
@@ -100,7 +120,6 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    
 }
 
 .section {
@@ -112,11 +131,26 @@ h3 {
     padding-bottom: 5px;
 }
 
- .etat-civil p,  .experience .exp-item,  .formations .formation-item,  .competences-info div,  .competences-logiciel div,  .langues div,  .centre-dinterets div,
- .personal-info p,  .experience .exp-item,  .education .education-item,  .computer-skills div,  .software-skills div,  .languages div,  .interests div,
- .stato-civile p,  .esperienza .exp-item,  .formazione .formazione-item,  .competenze-info div,  .competenze-software div,  .lingue div,  .interessi div {
+.etat-civil p, .experience .exp-item, .formations .formation-item, .competences-info div, .competences-logiciel div, .langues div, .centre-dinterets div,
+.personal-info p, .experience .exp-item, .education .education-item, .computer-skills div, .software-skills div, .languages div, .interests div,
+.stato-civile p, .esperienza .exp-item, .formazione .formazione-item, .competenze-info div, .competenze-software div, .lingue div, .interessi div {
     margin-bottom: 10px;
     padding: 5px;
     background-color: #e0e0e0;
     border: 1px solid #333;
+}
+
+/* Styles du pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Modifié pour que le pied de page ne chevauche pas le contenu */
+    width: 100%;
+    margin-top: auto; /* Permet au footer de rester en bas de la page */
+}
+
+footer p {
+    margin: 0;
 }
