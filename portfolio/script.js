@@ -4,11 +4,11 @@ function switchLanguage(lang) {
 
     let newPath;
     if (currentPath.includes('index')) {
-        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index_${lang}.html`;
+        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index.html`;
     } else if (currentPath.includes('resume')) {
-        newPath = lang === 'fr' ? '/portfolio/resume.html' : `/portfolio/${lang}/resume_${lang}.html`;
+        newPath = lang === 'fr' ? '/portfolio/resume.html' : `/portfolio/${lang}/resume.html`;
     } else {
-        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index_${lang}.html`; // Default to index page if no match
+        newPath = lang === 'fr' ? '/portfolio/index.html' : `/portfolio/${lang}/index.html`; // Default to index page if no match
     }
 
     window.location.href = newPath;
@@ -27,9 +27,9 @@ function setInitialLanguage() {
 
     const currentLang = supportedLangs.find(lang => {
         if (lang === 'fr') {
-            return !currentPath.includes('_en') && !currentPath.includes('_ru');
+            return !currentPath.includes('en') && !currentPath.includes('ru');
         } else {
-            return currentPath.includes(`_${lang}`);
+            return currentPath.includes(`${lang}`);
         }
     });
 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInitialLanguage();
 
     if (window.location.pathname.includes('resume')) {
-        const lang = window.location.pathname.includes('_en') ? 'en' : (window.location.pathname.includes('_ru') ? 'ru' : 'fr');
+        const lang = window.location.pathname.includes('en') ? 'en' : (window.location.pathname.includes('ru') ? 'ru' : 'fr');
         
         const paths = {
             fr: {
