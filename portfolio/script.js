@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (window.location.pathname.includes('resume')) {
         const lang = window.location.pathname.includes('en') ? 'en' : (window.location.pathname.includes('ru') ? 'ru' : 'fr');
-        
+
         const paths = {
             fr: {
                 xml: 'xml/cv_fr.xml',
@@ -73,37 +73,31 @@ document.addEventListener("DOMContentLoaded", function() {
         const xmlFile = paths[lang].xml;
         const xslFile = paths[lang].xsl;
 
-        const xhttp = new XMLHttpRequest();
-        xhttp.onload = function() {
-            const xml = this.responseXML;
-            loadXSL(xslFile, xml);
-        };
-        xhttp.open("GET", xmlFile, true);
-        xhttp.send();
+        fetch(xmlFile)
+            .then(response => response.text())
+            .then(xmlText => {
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(xmlText, "application/xml");
+                loadXSL(xslFile, xml);
+            })
+            .catch(error => console.error(`Failed to fetch XML file: ${error}`));
     }
 });
 
 function loadXSL(xslFile, xml) {
-    const xhttpXSL = new XMLHttpRequest();
-    xhttpXSL.onload = function() {
-        const xsl = this.responseXML;
-        if (xsl) {
-            const processor = new XSLTProcessor();
-            processor.importStylesheet(xsl);
-            const resultDocument = processor.transformToFragment(xml, document);
-            document.getElementById("cv-content").appendChild(resultDocument);
-        } else {
-            console.error(`Failed to load XSL file: ${xslFile}`);
-        }
-    };
-    xhttpXSL.open("GET", xslFile, true);
-    xhttpXSL.send();
-}
-
-
-function getXSL(xslFile) {
-    const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", xslFile, false);
-    xhttp.send();
-    return xhttp.status === 200 ? xhttp.responseXML : null;
+    fetch(xslFile)
+        .then(response => response.text())
+        .then(xslText => {
+            const parser = new DOMParser();
+            const xsl = parser.parseFromString(xslText, "application/xml");
+            if (xsl) {
+                const processor = new XSLTProcessor();
+                processor.importStylesheet(xsl);
+                const resultDocument = processor.transformToFragment(xml, document);
+                document.getElementById("cv-content").appendChild(resultDocument);
+            } else {
+                console.error(`Failed to parse XSL file: ${xslFile}`);
+            }
+        })
+        .catch(error => console.error(`Failed to fetch XSL file: ${error}`));
 }
