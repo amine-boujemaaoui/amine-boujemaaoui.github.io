@@ -1,47 +1,53 @@
-<!DOCTYPE html>
-<html lang="fr" vocab="http://schema.org/" xmlns:dc="http://purl.org/dc/terms/" typeof="WebPage">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/" lang="fr" xml:lang="fr"
+    vocab="http://schema.org/" typeof="WebPage">
 
 <head>
-    <meta charset="UTF-8">
-    <title property="name">Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="alternate" type="application/rdf+xml" href="rdf/cv.rdf" title="CV RDF">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="alternate" type="application/rdf+xml" href="rdf/cv_fr.rdf" title="CV RDF" />
 </head>
 
 <body>
-    <header property="header">
-        <h1 property="headline">Bienvenue sur mon portfolio</h1>
-        <nav property="navigation">
+    <header>
+        <h1>Bienvenue sur mon portfolio</h1>
+        <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="resume.html">CV</a></li>
                 <li class="dropdown">
                     <button class="dropbtn" id="selected-lang-btn">
-                        <img src="img/fr.svg" alt="Français" class="flag">
+                        <img src="img/fr.svg" alt="Français" class="flag" />
                     </button>
                     <div class="dropdown-content">
-                        <button onclick="switchLanguage('fr')"><img src="img/fr.svg" alt="Français" class="flag"></button>
-                        <button onclick="switchLanguage('en')"><img src="img/en.svg" alt="English" class="flag"></button>
-                        <button onclick="switchLanguage('ru')"><img src="img/ru.svg" alt="Русский" class="flag"></button>
+                        <button onclick="switchLanguage('fr')"><img src="img/fr.svg" alt="Français"
+                                class="flag" /></button>
+                        <button onclick="switchLanguage('en')"><img src="img/en.svg" alt="English"
+                                class="flag" /></button>
+                        <button onclick="switchLanguage('ru')"><img src="img/ru.svg" alt="Русский"
+                                class="flag" /></button>
                     </div>
                 </li>
             </ul>
         </nav>
     </header>
-    <main property="mainContent">
-        <section typeof="AboutPage">
+    <main>
+        <section>
             <h2>Accueil</h2>
             <p>Bienvenue sur mon portfolio personnel.</p>
             <div id="video">
-                <iframe id="youtube-iframe" width="800" height="600" src="https://www.youtube.com/embed/erLbbextvlY?cc_lang_pref=fr&cc_load_policy=1"></iframe>
+                <iframe id="youtube-iframe" width="800" height="600"
+                    src="https://www.youtube.com/embed/erLbbextvlY?cc_lang_pref=fr&amp;cc_load_policy=1"></iframe>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Amine Boujemaaoui. Tous droits réservés.</p>
         <p about="" resource="https://www.w3.org/TR/rdfa-syntax" rel="dc:conformsTo">
-            <a href="https://validator.w3.org/markup/check?uri=referer"><img src="https://www.w3.org/Icons/valid-xhtml-rdfa"
-                    alt="Valid XHTML + RDFa" height="31" width="88" /></a>
+            <a href="https://validator.w3.org/markup/check?uri=referer"><img
+                    src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31"
+                    width="88" /></a>
         </p>
     </footer>
     <script src="script.js"></script>

@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru" vocab="http://schema.org/" xmlns:dc="http://purl.org/dc/terms/" typeof="WebPage">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/" lang="ru" xml:lang="ru"
+    vocab="http://schema.org/" typeof="WebPage">
 
 <head>
-    <meta charset="UTF-8">
-    <title property="name">Резюме - Портфолио</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="alternate" type="application/rdf+xml" href="../rdf/cv_ru.rdf" title="CV RDF">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Резюме - Портфолио</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="alternate" type="application/rdf+xml" href="../rdf/cv_ru.rdf" title="CV RDF" />
 </head>
 
 <body>
@@ -17,12 +18,15 @@
                 <li><a href="resume.html">Резюме</a></li>
                 <li class="dropdown">
                     <button class="dropbtn" id="selected-lang-btn">
-                        <img src="../img/ru.svg" alt="Русский" class="flag">
+                        <img src="../img/ru.svg" alt="Русский" class="flag" />
                     </button>
                     <div class="dropdown-content">
-                        <button onclick="switchLanguage('fr')"><img src="../img/fr.svg" alt="Français" class="flag"></button>
-                        <button onclick="switchLanguage('en')"><img src="../img/en.svg" alt="English" class="flag"></button>
-                        <button onclick="switchLanguage('ru')"><img src="../img/ru.svg" alt="Русский" class="flag"></button>
+                        <button onclick="switchLanguage('fr')"><img src="../img/fr.svg" alt="Français"
+                                class="flag" /></button>
+                        <button onclick="switchLanguage('en')"><img src="../img/en.svg" alt="English"
+                                class="flag" /></button>
+                        <button onclick="switchLanguage('ru')"><img src="../img/ru.svg" alt="Русский"
+                                class="flag" /></button>
                     </div>
                 </li>
             </ul>
@@ -36,8 +40,9 @@
     <footer>
         <p>&copy; 2024 Amine Boujemaaoui. Tous droits réservés.</p>
         <p about="" resource="https://www.w3.org/TR/rdfa-syntax" rel="dc:conformsTo">
-            <a href="https://validator.w3.org/markup/check?uri=referer"><img src="https://www.w3.org/Icons/valid-xhtml-rdfa"
-                    alt="Valid XHTML + RDFa" height="31" width="88" /></a>
+            <a href="https://validator.w3.org/markup/check?uri=referer"><img
+                    src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31"
+                    width="88" /></a>
         </p>
     </footer>
     <script src="../script.js"></script>
