@@ -152,3 +152,10 @@ div[property="footer"] {
 div[property="footer"] p {
     margin: 0;
 }
+
+div[property="w3c"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
