@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/" xml:lang="ru" vocab="http://schema.org/"
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:lang="ru"
     typeof="WebPage">
 
 <head>
@@ -35,14 +36,19 @@
     <div property="mainContent">
         <div id="cv-content" typeof="Person">
             <!-- Transformed CV content will appear here -->
+            <div>
+                <span property="dc:name" datatype="xsd:string">Амин Бужемаауи</span>
+                <span property="dc:title" datatype="xsd:string">Веб-разработчик</span>
+                <span property="dc:description" datatype="xsd:string">Опыт работы в веб-разработке 5 лет.</span>
+            </div>
         </div>
     </div>
     <div property="footer">
         <p>&copy; 2024 Amine Boujemaaoui. Tous droits réservés.</p>
         <p about="" resource="https://www.w3.org/TR/rdfa-syntax" rel="dc:conformsTo">
-            <a href="https://validator.w3.org/markup/check?uri=referer"><img
-                    src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31"
-                    width="88" /></a>
+            <a href="https://validator.w3.org/markup/check?uri=referer">
+                <img src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31" width="88" />
+            </a>
         </p>
     </div>
     <script type="text/javascript" src="../script.js"></script>
