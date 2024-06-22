@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/" lang="fr" xml:lang="fr"
-    vocab="http://schema.org/" typeof="WebPage">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/" xml:lang="fr" vocab="http://schema.org/"
+    typeof="WebPage">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header>
+    <div property="header">
         <h1>Bienvenue sur mon portfolio</h1>
-        <nav>
+        <div property="navigation">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="resume.html">CV</a></li>
@@ -30,27 +30,30 @@
                     </div>
                 </li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
+        </div>
+    </div>
+    <div property="mainContent">
+        <div typeof="AboutPage">
             <h2>Accueil</h2>
             <p>Bienvenue sur mon portfolio personnel.</p>
             <div id="video">
-                <iframe id="youtube-iframe" width="800" height="600"
-                    src="https://www.youtube.com/embed/erLbbextvlY?cc_lang_pref=fr&amp;cc_load_policy=1"></iframe>
+                <object type="text/html"
+                    data="https://www.youtube.com/embed/erLbbextvlY?cc_lang_pref=fr&amp;cc_load_policy=1" width="800"
+                    height="600">
+                    <a href="https://www.youtube.com/embed/erLbbextvlY?cc_lang_pref=fr&amp;cc_load_policy=1">Video</a>
+                </object>
             </div>
-        </section>
-    </main>
-    <footer>
+        </div>
+    </div>
+    <div property="footer">
         <p>&copy; 2024 Amine Boujemaaoui. Tous droits réservés.</p>
         <p about="" resource="https://www.w3.org/TR/rdfa-syntax" rel="dc:conformsTo">
             <a href="https://validator.w3.org/markup/check?uri=referer"><img
                     src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31"
                     width="88" /></a>
         </p>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/" lang="en" xml:lang="en"
-    vocab="http://schema.org/" typeof="WebPage">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/" xml:lang="en" vocab="http://schema.org/"
+    typeof="WebPage">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header property="header">
+    <div property="header">
         <h1 property="headline">My Resume</h1>
-        <nav property="navigation">
+        <div property="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resume.html">Resume</a></li>
@@ -30,22 +30,22 @@
                     </div>
                 </li>
             </ul>
-        </nav>
-    </header>
-    <main property="mainContent">
+        </div>
+    </div>
+    <div property="mainContent">
         <div id="cv-content" typeof="Person">
             <!-- Transformed CV content will appear here -->
         </div>
-    </main>
-    <footer>
+    </div>
+    <div property="footer">
         <p>&copy; 2024 Amine Boujemaaoui. All rights reserved.</p>
         <p about="" resource="https://www.w3.org/TR/rdfa-syntax" rel="dc:conformsTo">
             <a href="https://validator.w3.org/markup/check?uri=referer"><img
                     src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31"
                     width="88" /></a>
         </p>
-    </footer>
-    <script src="../script.js"></script>
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
 </body>
 
 </html>

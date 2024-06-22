@@ -8,20 +8,20 @@ body {
     min-height: 100vh;
 }
 
-header {
+div[property="header"] {
     background-color: #333;
     color: #fff;
     padding-top: 10px 0;
     border-bottom: #74b598 4px solid;
 }
 
-header h1 {
+div[property="header"] h1 {
     margin: 0;
     padding: 25px;
     padding-bottom: 0;
 }
 
-nav {
+div[property="navigation"] {
     margin-top: 15px;
     background-color: #444;
     color: #fff;
@@ -32,7 +32,7 @@ nav {
     height: 5ex;
 }
 
-nav ul {
+div[property="navigation"] ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -40,22 +40,22 @@ nav ul {
     margin: 0;
 }
 
-nav ul li {
+div[property="navigation"] ul li {
     margin: 0 15px;
     position: relative; /* Nécessaire pour le dropdown */
 }
 
-nav ul li a, nav ul li button {
+div[property="navigation"] ul li a, div[property="navigation"] ul li button {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
 }
 
-nav .dropdown {
+div[property="navigation"] .dropdown {
     display: inline-block;
 }
 
-nav .dropdown .dropbtn {
+div[property="navigation"] .dropdown .dropbtn {
     background-color: #444;
     border: none;
     cursor: pointer;
@@ -63,7 +63,7 @@ nav .dropdown .dropbtn {
     padding: 0;
 }
 
-nav .dropdown .dropbtn .flag {
+div[property="navigation"] .dropdown .dropbtn .flag {
     width: 24px;
     height: 16px;
 }
@@ -73,7 +73,7 @@ nav .dropdown .dropbtn .flag {
     height: auto;
 }
 
-nav .dropdown-content {
+div[property="navigation"] .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -82,7 +82,7 @@ nav .dropdown-content {
     z-index: 1;
 }
 
-nav .dropdown-content a {
+div[property="navigation"] .dropdown-content a {
     color: black;
     padding: 2px 6px;
     text-decoration: none;
@@ -90,20 +90,20 @@ nav .dropdown-content a {
     font-size: 16px;
 }
 
-nav .dropdown-content a:hover {
+div[property="navigation"] .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-nav .dropdown:hover .dropdown-content {
+div[property="navigation"] .dropdown:hover .dropdown-content {
     display: block;
 }
 
-main {
+div[property="mainContent"] {
     padding: 20px;
     text-align: center;
     margin-left: 20ex;
     margin-right: 20ex;
-    flex: 1; /* Permet à main de prendre l'espace disponible */
+    flex: 1; /* Permet à mainContent de prendre l'espace disponible */
 }
 
 .hidden {
@@ -141,7 +141,7 @@ h3 {
 }
 
 /* Styles du pied de page */
-footer {
+div[property="footer"] {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -151,6 +151,6 @@ footer {
     margin-top: auto; /* Permet au footer de rester en bas de la page */
 }
 
-footer p {
+div[property="footer"] p {
     margin: 0;
 }
