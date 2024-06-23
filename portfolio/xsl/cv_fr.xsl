@@ -37,11 +37,18 @@
                 <p>
                     <strong>Adresse :</strong>
                     <span property="schema:address" typeof="schema:PostalAddress">
-                        <xsl:value-of select="CV/etat_civil/adresse/@numero" /> 
-                        <xsl:value-of
-                            select="CV/etat_civil/adresse/@rue" />, <xsl:value-of
-                            select="CV/etat_civil/adresse/@ville" />, <xsl:value-of
-                            select="CV/etat_civil/adresse/@cp" />
+                        <span property="schema:streetAddress">
+                            <xsl:value-of select="CV/etat_civil/adresse/@numero" />
+                            <xsl:value-of select="CV/etat_civil/adresse/@rue" />
+                        </span>
+        ,
+                        <span property="schema:addressLocality">
+                            <xsl:value-of select="CV/etat_civil/adresse/@ville" />
+                        </span>
+        ,
+                        <span property="schema:postalCode">
+                            <xsl:value-of select="CV/etat_civil/adresse/@cp" />
+                        </span>
                     </span>
                 </p>
                 <p>
@@ -56,10 +63,8 @@
                         <xsl:value-of select="CV/etat_civil/email" />
                     </span>
                 </p>
-                <p>
-                    <strong>Permis :</strong> 
-                    <xsl:value-of select="CV/etat_civil/permis/@titulaire" />
-        (Type: <xsl:value-of select="CV/etat_civil/permis/@type" />) </p>
+                <p><strong>Permis :</strong> <xsl:value-of select="CV/etat_civil/permis/@titulaire" />
+        (Type: <xsl:value-of select="CV/etat_civil/permis/@type" />)</p>
             </div>
             <h3>Expérience Professionnelle</h3>
             <div class="section experience">
@@ -129,7 +134,7 @@
                             <span property="schema:startDate">
                                 <xsl:value-of select="annee/@debut" />
                             </span>
-                            <xsl:if test="annee/@fin"> - <strong>Année de fin :</strong> 
+                            <xsl:if test="annee/@fin"> - <strong>Année de fin :</strong>
                                 <span
                                     property="schema:endDate">
                                     <xsl:value-of select="annee/@fin" />
@@ -152,8 +157,7 @@
                         <xsl:for-each select="projets/projet">
                             <div>- <span property="schema:workExample">
                                     <xsl:value-of select="." />
-                                </span>
-                            </div>
+                                </span></div>
                         </xsl:for-each>
                     </div>
                 </xsl:for-each>
@@ -196,8 +200,7 @@
                 <xsl:for-each select="CV/centreDinterets/centreDinteret">
                     <div>- <span property="schema:hobby">
                             <xsl:value-of select="@nom" />
-                        </span>
-                    </div>
+                        </span></div>
                 </xsl:for-each>
             </div>
         </div>
