@@ -1,19 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/terms/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:lang="fr"
-    typeof="WebPage">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:schema="http://schema.org/" xml:lang="fr" typeof="schema:WebPage">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>CV - Portfolio</title>
+    <title property="schema:name">CV - Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="alternate" type="application/rdf+xml" href="rdf/cv_fr.rdf" title="CV RDF" />
 </head>
 
 <body>
-    <div property="header">
-        <h1 property="headline">Mon CV</h1>
-        <div property="navigation">
+    <div property="schema:header">
+        <h1 property="schema:headline">Mon CV</h1>
+        <div property="schema:mainEntityOfPage" typeof="schema:SiteNavigationElement">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="resume.html">CV</a></li>
@@ -33,23 +31,23 @@
             </ul>
         </div>
     </div>
-    <div property="mainContent">
-        <div id="cv-content" typeof="Person">
+    <div property="schema:mainContentOfPage">
+        <div id="cv-content" typeof="schema:Person">
             <!-- Transformed CV content will appear here -->
             <div>
-                <span property="dc:name" datatype="xsd:string">Amine Boujemaaoui</span>
-                <span property="dc:title" datatype="xsd:string">Développeur Web</span>
-                <span property="dc:description" datatype="xsd:string">Expérience de travail en développement web de 5
-                    ans.</span>
+                <span property="schema:name">Amine Boujemaaoui</span>
+                <span property="schema:jobTitle">Développeur Web</span>
+                <span property="schema:description">Expérience de travail en développement web de 5 ans.</span>
             </div>
         </div>
     </div>
-    <div property="footer">
+    <div property="schema:footer">
         <p>&copy; 2024 Amine Boujemaaoui. Tous droits réservés.</p>
-        <div property="w3c">
-            <p about="" resource="https://www.w3.org/TR/rdfa-syntax" rel="dc:conformsTo">
+        <div>
+            <p about="" resource="https://www.w3.org/TR/rdfa-syntax" rel="schema:conformsTo">
                 <a href="https://validator.w3.org/markup/check?uri=referer">
-                    <img src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31" width="88" />
+                    <img src="https://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31"
+                        width="88" />
                 </a>
             </p>
             <p>
