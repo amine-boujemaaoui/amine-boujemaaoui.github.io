@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul des Moyennes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Calcul des Moyennes</h1>
+    <h3 id="overallAverage">Moyenne Générale: ...</h3>
+    <form id="gradesForm">
+        <table id="subjectsTable">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Titre</th>
+                    <th>Partiel</th>
+                    <th>CCTP</th>
+                    <th>Moyenne</th>
+                </tr>
+            </thead>
+            <tbody id="subjects"></tbody>
+        </table>
+        <button type="button" onclick="calculateAverages()">Calculer</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
