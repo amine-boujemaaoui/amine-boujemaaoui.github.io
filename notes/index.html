@@ -11,8 +11,43 @@
 <body>
     <h1>Calcul des Moyennes</h1>
     <div class="container">
-        <textarea id="subjectsInput" rows="10" cols="50" placeholder='Collez le JSON pour "subjects" ici'></textarea>
+        <div class="example">
+            <h3>Exemple de JSON pour UE :</h3>
+            <pre>
+[
+    {
+        "title": "Culture d'entreprise IV",
+        "ue_code": "G4SG2CE4",
+        "note_minimal": 10,
+        "coef": 4
+    },
+    ...
+]
+            </pre>
+        </div>
         <textarea id="ueInput" rows="10" cols="50" placeholder='Collez le JSON pour "ue" ici'></textarea>
+    </div>
+    <div class="container">
+        <div class="example">
+            <h3>Exemple de JSON pour Subjects :</h3>
+            <pre>
+[
+    {
+        "code": "G4SG2AN4",
+        "title": "Anglais",
+        "coef": 1,
+        "notation": {
+            "partiel_coef": 0.5,
+            "cctp_coef": 0.5
+        },
+        "note_minimal": 10,
+        "ue_code": "G4SG2CE4"
+    },
+    ...
+]
+            </pre>
+        </div>
+        <textarea id="subjectsInput" rows="10" cols="50" placeholder='Collez le JSON pour "subjects" ici'></textarea>
     </div>
     <button type="button" onclick="initialize()">Initialiser</button>
     <div id="overallAverage"></div>

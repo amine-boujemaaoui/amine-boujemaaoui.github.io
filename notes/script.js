@@ -31,11 +31,22 @@ function renderSubjects() {
 
         const row = document.createElement('tr');
         row.id = subject.code;
+
+        let partielInput = '';
+        if (subject.notation.partiel_coef > 0) {
+            partielInput = `<input type="number" id="${subject.code}-partiel" step="1" inputmode="numeric">`;
+        }
+
+        let cctpInput = '';
+        if (subject.notation.cctp_coef > 0) {
+            cctpInput = `<input type="number" id="${subject.code}-cctp" step="1" inputmode="numeric">`;
+        }
+
         row.innerHTML = `
             <td>${subject.code}</td>
             <td>${subject.title}</td>
-            <td><input type="number" id="${subject.code}-partiel" step="1" inputmode="numeric"></td>
-            <td><input type="number" id="${subject.code}-cctp" step="1" inputmode="numeric"></td>
+            <td>${partielInput}</td>
+            <td>${cctpInput}</td>
             <td id="${subject.code}-average"></td>
         `;
         subjectsDiv.appendChild(row);
@@ -58,8 +69,8 @@ function calculateSubjectAverage(subject, results) {
 function calculateAverages() {
     const results = {};
     subjects.forEach(subject => {
-        const partiel = parseFloat(document.getElementById(`${subject.code}-partiel`).value) || 0;
-        const cctp = parseFloat(document.getElementById(`${subject.code}-cctp`).value) || 0;
+        const partiel = parseFloat(document.getElementById(`${subject.code}-partiel`)?.value) || 0;
+        const cctp = parseFloat(document.getElementById(`${subject.code}-cctp`)?.value) || 0;
         results[subject.code] = { partiel, cctp };
     });
 

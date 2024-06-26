@@ -28,6 +28,20 @@ textarea {
     max-width: 400px;
 }
 
+.example {
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.example pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+}
+
 form {
     margin-bottom: 20px;
     text-align: center;
