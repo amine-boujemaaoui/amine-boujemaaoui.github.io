@@ -10,7 +10,12 @@
 
 <body>
     <h1>Calcul des Moyennes</h1>
-    <h3 id="overallAverage">Moyenne Générale: ...</h3>
+    <div class="container">
+        <textarea id="subjectsInput" rows="10" cols="50" placeholder='Collez le JSON pour "subjects" ici'></textarea>
+        <textarea id="ueInput" rows="10" cols="50" placeholder='Collez le JSON pour "ue" ici'></textarea>
+    </div>
+    <button type="button" onclick="initialize()">Initialiser</button>
+    <div id="overallAverage"></div>
     <form id="gradesForm">
         <table id="subjectsTable">
             <thead>

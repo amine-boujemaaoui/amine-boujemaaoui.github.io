@@ -4,7 +4,7 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #333;
     text-align: center;
 }
@@ -14,6 +14,18 @@ h1, h2 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 400px;
 }
 
 form {
@@ -77,16 +89,12 @@ button:hover {
     background-color: #f8d7da !important;
 }
 
-.ue-validated {
-    background-color: #00a526 !important;
-}
-
-.ue-not-validated {
-    background-color: #ff0e22 !important;
-}
-
 .ue-row {
     font-weight: bold;
     text-align: center;
     background-color: #f2f2f2;
+}
+
+textarea {
+    color: #000;
 }

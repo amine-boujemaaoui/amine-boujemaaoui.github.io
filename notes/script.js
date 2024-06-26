@@ -1,200 +1,36 @@
-const subjects = [
-    {
-        "code": "G4SG2AN4",
-        "title": "Anglais",
-        "coef": 1,
-        "notation": {
-            "partiel_coef": 0.5,
-            "cctp_coef": 0.5
-        },
-        "note_minimal": 10,
-        "ue_code": "G4SG2CE4"
-    },
-    {
-        "code": "G4SG2DT",
-        "title": "Droit du travail",
-        "coef": 1,
-        "notation": {
-            "partiel_coef": 1,
-            "cctp_coef": 0
-        },
-        "note_minimal": 8,
-        "ue_code": "G4SG2CE4"
-    },
-    {
-        "code": "G4SG2ET",
-        "title": "Éthique",
-        "coef": 1,
-        "notation": {
-            "partiel_coef": 0,
-            "cctp_coef": 1
-        },
-        "note_minimal": 8,
-        "ue_code": "G4SG2CE4"
-    },
-    {
-        "code": "G4SG2QSE",
-        "title": "QSE",
-        "coef": 1,
-        "notation": {
-            "partiel_coef": 1,
-            "cctp_coef": 0
-        },
-        "note_minimal": 8,
-        "ue_code": "G4SG2CE4"
-    },
-    {
-        "code": "G4S1E2E2",
-        "title": "Entreprise",
-        "coef": 12,
-        "notation": {
-            "partiel_coef": 0,
-            "cctp_coef": 1
-        },
-        "note_minimal": 10,
-        "ue_code": "G4S1E2FP2"
-    },
-    {
-        "code": "G4S1RL2",
-        "title": "Restitution-Liaison",
-        "coef": 2,
-        "notation": {
-            "partiel_coef": 0,
-            "cctp_coef": 1
-        },
-        "note_minimal": 10,
-        "ue_code": "G4S1E2FP2"
-    },
-    {
-        "code": "G4S1PE",
-        "title": "Administration système",
-        "coef": 2,
-        "notation": {
-            "partiel_coef": 0.67,
-            "cctp_coef": 0.33
-        },
-        "note_minimal": 7,
-        "ue_code": "G4S1ASR2"
-    },
-    {
-        "code": "G4S1RR",
-        "title": "Gestion des réseaux informatiques",
-        "coef": 2,
-        "notation": {
-            "partiel_coef": 0.67,
-            "cctp_coef": 0.33
-        },
-        "note_minimal": 7,
-        "ue_code": "G4S1ASR2"
-    },
-    {
-        "code": "G4S1IG",
-        "title": "Interfaces Graphiques Java",
-        "coef": 2,
-        "notation": {
-            "partiel_coef": 0.67,
-            "cctp_coef": 0.33
-        },
-        "note_minimal": 7,
-        "ue_code": "G4S1PL3"
-    },
-    {
-        "code": "G4S1PLO",
-        "title": "Programmation logique",
-        "coef": 2,
-        "notation": {
-            "partiel_coef": 0.67,
-            "cctp_coef": 0.33
-        },
-        "note_minimal": 7,
-        "ue_code": "G4S1PL3"
-    },
-    {
-        "code": "G4S1BD",
-        "title": "Bases de Données Avancées",
-        "coef": 2,
-        "notation": {
-            "partiel_coef": 0.67,
-            "cctp_coef": 0.33
-        },
-        "note_minimal": 7,
-        "ue_code": "G4S1SI"
-    },
-    {
-        "code": "G4S2OPT",
-        "title": "Optimisation linéaire et optimisation combinatoire",
-        "coef": 1,
-        "notation": {
-            "partiel_coef": 0.67,
-            "cctp_coef": 0.33
-        },
-        "note_minimal": 7,
-        "ue_code": "G4S1SI"
-    },
-    {
-        "code": "G4S1WS",
-        "title": "Web sémantique",
-        "coef": 1,
-        "notation": {
-            "partiel_coef": 0.67,
-            "cctp_coef": 0.33
-        },
-        "note_minimal": 7,
-        "ue_code": "G4S1SI"
-    }
-];
+let subjects = [];
+let ue = [];
 
-const ue = [
-    {
-        "title": "Culture d'entreprise IV",
-        "ue_code": "G4SG2CE4",
-        "note_minimal": 10,
-        "coef": 4
-    },
-    {
-        "title": "Entreprise IV",
-        "ue_code": "G4S1E2FP2",
-        "note_minimal": 10,
-        "coef": 14
-    },
-    {
-        "title": "Architecture, Systèmes et Réseaux II",
-        "ue_code": "G4S1ASR2",
-        "note_minimal": 10,
-        "coef": 4
-    },
-    {
-        "title": "Programmation et Langages IV",
-        "ue_code": "G4S1PL3",
-        "note_minimal": 10,
-        "coef": 4
-    },
-    {
-        "title": "Systèmes d'information et architecture logicielle III",
-        "ue_code": "G4S1SI",
-        "note_minimal": 10,
-        "coef": 4
-    }
-];
-
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const subjectsDiv = document.getElementById('subjects');
-    let currentUeCode = '';
+function initialize() {
+    const subjectsInput = document.getElementById('subjectsInput').value;
+    const ueInput = document.getElementById('ueInput').value;
     
+    try {
+        subjects = JSON.parse(subjectsInput);
+        ue = JSON.parse(ueInput);
+        renderSubjects();
+    } catch (error) {
+        alert('Erreur de parsing JSON: ' + error.message);
+    }
+}
+
+function renderSubjects() {
+    const subjectsDiv = document.getElementById('subjects');
+    subjectsDiv.innerHTML = '';
+    let currentUeCode = '';
+
     subjects.forEach(subject => {
         if (subject.ue_code !== currentUeCode) {
             currentUeCode = subject.ue_code;
             const ueRow = document.createElement('tr');
             ueRow.className = 'ue-row';
-            ueRow.id = `ue-${currentUeCode}`; // Add id to the UE row for styling
+            ueRow.id = `ue-${currentUeCode}`;
             ueRow.innerHTML = `<td colspan="5">UE ${currentUeCode}</td>`;
             subjectsDiv.appendChild(ueRow);
         }
 
         const row = document.createElement('tr');
-        row.id = subject.code; // Add id to the row for styling
+        row.id = subject.code;
         row.innerHTML = `
             <td>${subject.code}</td>
             <td>${subject.title}</td>
@@ -204,7 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         `;
         subjectsDiv.appendChild(row);
     });
-});
+}
 
 function calculateSubjectAverage(subject, results) {
     const notation = subject.notation;
