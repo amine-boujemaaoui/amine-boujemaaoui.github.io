@@ -196,7 +196,6 @@ function initialize() {
   }
 }
 
-
 function renderSubjects() {
   const subjectsDiv = document.getElementById("subjects");
   subjectsDiv.innerHTML = "";
